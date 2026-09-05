@@ -1,16 +1,11 @@
-```javascript
 document.addEventListener("DOMContentLoaded", () => {
 
   const header = document.getElementById("siteHeader");
-
   const menuToggle = document.getElementById("menuToggle");
-
   const mobileMenu = document.getElementById("mobileMenu");
 
   const lightbox = document.getElementById("lightbox");
-
   const lightboxImage = document.getElementById("lightboxImage");
-
   const lightboxClose = document.getElementById("lightboxClose");
 
   const year = document.getElementById("year");
@@ -53,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!menuToggle || !mobileMenu) return;
 
     menuToggle.classList.remove("active");
-
     mobileMenu.classList.remove("open");
 
     menuToggle.setAttribute(
@@ -148,16 +142,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-  /* ICONES LUCIDE */
+  /* ÍCONES LUCIDE */
 
   function renderIcons() {
 
-    if (
-      typeof lucide !== "undefined"
-    ) {
-
+    if (typeof lucide !== "undefined") {
       lucide.createIcons();
-
     }
 
   }
@@ -177,9 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         entries.forEach(entry => {
 
-          if (
-            entry.isIntersecting
-          ) {
+          if (entry.isIntersecting) {
 
             entry.target.classList.add(
               "visible"
@@ -201,9 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   revealElements.forEach(element => {
-
     observer.observe(element);
-
   });
 
 
@@ -224,12 +210,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    lightboxImage.src =
-      imageSrc;
+    lightboxImage.src = imageSrc;
 
-    lightbox.classList.add(
-      "open"
-    );
+    lightbox.classList.add("open");
 
     document.body.style.overflow =
       "hidden";
@@ -246,17 +229,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    lightbox.classList.remove(
-      "open"
-    );
+    lightbox.classList.remove("open");
 
-    document.body.style.overflow =
-      "";
+    document.body.style.overflow = "";
 
     setTimeout(() => {
-
       lightboxImage.src = "";
-
     }, 250);
 
   }
@@ -272,9 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
           item.dataset.image;
 
         if (image) {
-
           openLightbox(image);
-
         }
 
       }
@@ -299,12 +275,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "click",
       event => {
 
-        if (
-          event.target === lightbox
-        ) {
-
+        if (event.target === lightbox) {
           closeLightbox();
-
         }
 
       }
@@ -319,14 +291,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "keydown",
     event => {
 
-      if (
-        event.key === "Escape"
-      ) {
-
+      if (event.key === "Escape") {
         closeMenu();
-
         closeLightbox();
-
       }
 
     }
@@ -358,9 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ".hero-bg",
       {
         scale: 1.1,
-
         duration: 1.5,
-
         ease: "power2.out"
       }
     );
@@ -372,21 +337,14 @@ document.addEventListener("DOMContentLoaded", () => {
       ".hero-bg",
       {
         yPercent: 10,
-
         ease: "none",
 
         scrollTrigger: {
-
           trigger: ".hero",
-
           start: "top top",
-
           end: "bottom top",
-
           scrub: true
-
         }
-
       }
     );
 
@@ -397,26 +355,17 @@ document.addEventListener("DOMContentLoaded", () => {
       ".manifesto-glow",
       {
         y: -80,
-
         ease: "none",
 
         scrollTrigger: {
-
           trigger: ".manifesto",
-
           start: "top bottom",
-
           end: "bottom top",
-
           scrub: true
-
         }
-
       }
     );
 
   }
 
-
 });
-```
