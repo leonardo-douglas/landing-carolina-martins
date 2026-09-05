@@ -1,494 +1,992 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080808" />
 
-  <title>Dra. Carolina Martins | Clínica de Estética em São José dos Campos</title>
-  <meta
-    name="description"
-    content="Clínica de estética da Dra. Carolina Martins em São José dos Campos. Atendimento personalizado em clínica geral, cirurgias, clareamento e harmonização facial."
-  />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dra. Carolina Martins | Clínica de Estética" />
-  <meta
-    property="og:description"
-    content="Tratamentos personalizados para cuidar da sua beleza, autoestima e bem-estar com segurança, técnica e atenção aos detalhes."
-  />
-  <meta property="og:image" content="../assets/hero.jpg" />
-  <meta property="og:locale" content="pt_BR" />
-
-  <link rel="icon" href="../assets/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="style.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Dra. Carolina Martins",
-    "description": "Clínica de Estética / Saúde e Estética",
-    "telephone": "+5512981652378",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Euclides Miranda Miragaia, 939",
-      "addressLocality": "São José dos Campos",
-      "addressRegion": "SP",
-      "postalCode": "12245-820",
-      "addressCountry": "BR"
-    }
-  }
-  </script>
-</head>
-
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Dra. Carolina Martins - Início">
-        <img src="../assets/logo.png" alt="Logo Dra. Carolina Martins" />
+
+      <a href="#inicio" class="brand">
+        <img src="../assets/logo.png" alt="Dra. Carolina Martins">
       </a>
 
-      <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="#inicio">Início</a>
+      <nav class="desktop-nav">
         <a href="#sobre">Sobre</a>
         <a href="#especialidades">Especialidades</a>
-        <a href="#diferenciais">Diferenciais</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#galeria">Galeria</a>
         <a href="#avaliacoes">Avaliações</a>
-        <a href="#localizacao">Localização</a>
+        <a href="#localizacao">Contato</a>
       </nav>
 
+      <a href="style.css"></a>
+
       <a
-        class="btn btn-gold header-cta"
+        class="header-cta"
         href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
         target="_blank"
         rel="noopener noreferrer"
       >
         Agendar avaliação
+        <i data-lucide="arrow-up-right"></i>
       </a>
 
       <button
         class="menu-toggle"
         id="menuToggle"
         type="button"
-        aria-expanded="false"
-        aria-controls="mobileMenu"
         aria-label="Abrir menu"
+        aria-expanded="false"
       >
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
     </div>
 
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação mobile">
-      <a href="#inicio">Início</a>
+    <nav class="mobile-menu" id="mobileMenu">
+
       <a href="#sobre">Sobre</a>
       <a href="#especialidades">Especialidades</a>
-      <a href="#diferenciais">Diferenciais</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#galeria">Galeria</a>
       <a href="#avaliacoes">Avaliações</a>
-      <a href="#localizacao">Localização</a>
+      <a href="#localizacao">Contato</a>
+
       <a
-        class="btn btn-gold"
+        class="mobile-cta"
         href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
         target="_blank"
         rel="noopener noreferrer"
       >
-        Agendar avaliação
+        Agendar pelo WhatsApp
+        <i data-lucide="message-circle"></i>
       </a>
+
     </nav>
+
   </header>
 
-  <main id="conteudo">
+
+  <main>
+
+    <!-- HERO -->
     <section class="hero" id="inicio">
-      <img class="hero-bg" src="../assets/hero.jpg" alt="" aria-hidden="true" />
+
+      <img
+        class="hero-bg"
+        src="../assets/hero.jpg"
+        alt=""
+      >
+
       <div class="hero-overlay"></div>
 
-      <div class="container hero-content">
-        <span class="eyebrow hero-eyebrow">ESTÉTICA • CUIDADO • SOFISTICAÇÃO</span>
+      <div class="container hero-grid">
 
-        <h1>
-          Realce sua beleza.<br />
-          <em>Valorize quem você é.</em>
-        </h1>
+        <div class="hero-content">
 
-        <p class="hero-text">
-          Tratamentos personalizados para cuidar da sua beleza, autoestima e bem-estar com
-          segurança, técnica e atenção aos detalhes.
-        </p>
+          <div class="eyebrow reveal">
+            <span></span>
+            ESTÉTICA · CUIDADO · SOFISTICAÇÃO
+          </div>
 
-        <div class="hero-actions">
-          <a
-            class="btn btn-gold"
-            href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Agendar avaliação
-            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-          </a>
+          <h1 class="reveal">
+            Realce sua beleza.
+            <em>Valorize quem você é.</em>
+          </h1>
 
-          <a class="btn btn-ghost" href="#sobre">Conheça a clínica</a>
-        </div>
-
-        <div class="hero-note">
-          <span class="hero-note-dot"></span>
-          Atendimento personalizado
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light" id="sobre">
-      <div class="container split-layout">
-        <div class="image-frame reveal">
-          <img
-            src="../assets/doutora.jpg"
-            alt="Dra. Carolina Martins em ambiente clínico"
-            loading="lazy"
-          />
-          <div class="image-accent"></div>
-        </div>
-
-        <div class="content-block reveal">
-          <span class="eyebrow">SOBRE</span>
-          <h2>Cuidado que começa nos detalhes.</h2>
-          <p>
-            Na clínica da Dra. Carolina Martins, cada atendimento é pensado de forma
-            individualizada, buscando compreender as necessidades e objetivos de cada paciente.
+          <p class="hero-description reveal">
+            Uma experiência de cuidado pensada para você, com atendimento
+            individualizado, atenção aos detalhes e procedimentos alinhados
+            aos seus objetivos.
           </p>
 
-          <div class="feature-list">
-            <div><i data-lucide="sparkles"></i><span>Atendimento personalizado</span></div>
-            <div><i data-lucide="armchair"></i><span>Ambiente sofisticado</span></div>
-            <div><i data-lucide="scan-face"></i><span>Procedimentos individualizados</span></div>
-            <div><i data-lucide="shield-check"></i><span>Foco em segurança e bem-estar</span></div>
+          <div class="hero-buttons reveal">
+
+            <a
+              class="button button-gold"
+              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar avaliação
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a class="button button-outline" href="#especialidades">
+              Conhecer tratamentos
+              <i data-lucide="arrow-down"></i>
+            </a>
+
           </div>
 
+          <div class="hero-trust reveal">
+            <span class="trust-dot"></span>
+            Atendimento personalizado
+            <span class="separator"></span>
+            São José dos Campos · SP
+          </div>
+
+        </div>
+
+
+        <div class="hero-card reveal">
+
+          <span>UMA EXPERIÊNCIA MAIS PESSOAL</span>
+
+          <strong>
+            Você no centro
+            de cada decisão.
+          </strong>
+
+          <div class="gold-line"></div>
+
+          <a href="#sobre">
+            Conheça a proposta
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="scroll-indicator">
+        <span>ROLE PARA EXPLORAR</span>
+        <i data-lucide="arrow-down"></i>
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="intro">
+
+      <div class="container intro-grid">
+
+        <div class="reveal">
+
+          <span class="eyebrow dark">
+            UMA EXPERIÊNCIA DIFERENTE
+          </span>
+
+          <h2>
+            O cuidado começa
+            <em>antes</em> do procedimento.
+          </h2>
+
+        </div>
+
+        <div class="intro-text reveal">
+
+          <p>
+            Escutar, entender e orientar fazem parte da experiência.
+            O objetivo é construir um atendimento claro, confortável
+            e individualizado em cada etapa.
+          </p>
+
+          <a href="#sobre" class="text-link">
+            Conhecer a clínica
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section class="section about" id="sobre">
+
+      <div class="container about-grid">
+
+        <div class="about-image reveal">
+
+          <div class="image-frame">
+
+            <img
+              src="../assets/doutora.jpg"
+              alt="Dra. Carolina Martins"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="image-decoration"></div>
+
+          <div class="about-badge">
+
+            <i data-lucide="heart-handshake"></i>
+
+            <span>
+              Cuidado<br>
+              individualizado
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+          <span class="eyebrow reveal">
+            SOBRE
+          </span>
+
+          <h2 class="reveal">
+            Cuidar da sua imagem também é
+            cuidar de <em>você.</em>
+          </h2>
+
+          <p class="lead reveal">
+            Na clínica da Dra. Carolina Martins, cada atendimento parte
+            de uma conversa individual para compreender necessidades,
+            expectativas e objetivos.
+          </p>
+
+          <p class="reveal">
+            A proposta é oferecer uma experiência acolhedora,
+            sofisticada e atenta aos detalhes — do primeiro contato
+            ao acompanhamento.
+          </p>
+
+
+          <div class="about-points reveal">
+
+            <div>
+              <i data-lucide="check"></i>
+              Atendimento personalizado
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              Abordagem individualizada
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              Ambiente confortável
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              Foco em segurança e bem-estar
+            </div>
+
+          </div>
+
+
           <a
-            class="text-link"
-            href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
+            class="text-link reveal"
+            href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20melhor%20os%20atendimentos%20da%20Dra.%20Carolina%20Martins."
             target="_blank"
             rel="noopener noreferrer"
           >
-            Falar com a clínica
-            <i data-lucide="arrow-right" aria-hidden="true"></i>
+            Conversar com a clínica
+            <i data-lucide="arrow-up-right"></i>
           </a>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- ESPECIALIDADES -->
     <section class="section specialties" id="especialidades">
+
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">ESPECIALIDADES</span>
-          <h2>Procedimentos pensados para valorizar sua beleza de forma personalizada.</h2>
-        </div>
 
-        <div class="cards-grid specialty-grid">
-          <article class="card specialty-card reveal">
-            <div class="icon-box"><i data-lucide="stethoscope"></i></div>
-            <span class="card-number">01</span>
-            <h3>Clínica Geral</h3>
-            <p>Cuidados completos e acompanhamento personalizado para diferentes necessidades.</p>
-            <a
-              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Saiba mais <i data-lucide="arrow-up-right"></i>
-            </a>
-          </article>
+        <div class="section-header reveal">
 
-          <article class="card specialty-card reveal">
-            <div class="icon-box"><i data-lucide="cross"></i></div>
-            <span class="card-number">02</span>
-            <h3>Cirurgias</h3>
-            <p>Procedimentos realizados com planejamento, cuidado e atenção individualizada.</p>
-            <a
-              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Saiba mais <i data-lucide="arrow-up-right"></i>
-            </a>
-          </article>
-
-          <article class="card specialty-card reveal">
-            <div class="icon-box"><i data-lucide="sparkle"></i></div>
-            <span class="card-number">03</span>
-            <h3>Clareamento</h3>
-            <p>Tratamentos voltados para um sorriso mais iluminado e uma aparência renovada.</p>
-            <a
-              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Saiba mais <i data-lucide="arrow-up-right"></i>
-            </a>
-          </article>
-
-          <article class="card specialty-card reveal">
-            <div class="icon-box"><i data-lucide="scan-face"></i></div>
-            <span class="card-number">04</span>
-            <h3>Harmonização Facial</h3>
-            <p>Procedimentos personalizados para valorizar a harmonia e o equilíbrio da face.</p>
-            <a
-              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Saiba mais <i data-lucide="arrow-up-right"></i>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="impact-section">
-      <div class="impact-lines"></div>
-      <div class="container impact-content reveal">
-        <span class="eyebrow">ESSÊNCIA</span>
-        <blockquote>
-          Beleza não é sobre mudar quem você é.<br />
-          <em>É sobre valorizar o que já existe em você.</em>
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="section section-light" id="diferenciais">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">DIFERENCIAIS</span>
-          <h2>Uma experiência pensada para você</h2>
-        </div>
-
-        <div class="cards-grid difference-grid">
-          <article class="difference-card reveal">
-            <i data-lucide="user-round-check"></i>
-            <h3>Atendimento personalizado</h3>
-            <p>Cada pessoa possui necessidades e objetivos diferentes.</p>
-          </article>
-          <article class="difference-card reveal">
-            <i data-lucide="gem"></i>
-            <h3>Ambiente sofisticado</h3>
-            <p>Um espaço pensado para proporcionar conforto e tranquilidade.</p>
-          </article>
-          <article class="difference-card reveal">
-            <i data-lucide="heart-handshake"></i>
-            <h3>Cuidado em cada detalhe</h3>
-            <p>Uma experiência acolhedora desde o primeiro contato.</p>
-          </article>
-          <article class="difference-card reveal">
-            <i data-lucide="fingerprint"></i>
-            <h3>Abordagem individualizada</h3>
-            <p>Cada tratamento considera as características e objetivos de cada paciente.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section gallery-section" id="galeria">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">NOSSO ESPAÇO</span>
-          <h2>Detalhes que transformam cada experiência.</h2>
-        </div>
-
-        <div class="gallery-grid">
-          <button class="gallery-item gallery-large reveal" type="button" data-full="../assets/clinica-1.jpg" aria-label="Ampliar imagem da clínica 1">
-            <img src="../assets/clinica-1.jpg" alt="Ambiente da clínica - imagem 1" loading="lazy" />
-          </button>
-          <button class="gallery-item reveal" type="button" data-full="../assets/procedimento-1.jpg" aria-label="Ampliar imagem de procedimento 1">
-            <img src="../assets/procedimento-1.jpg" alt="Procedimento estético - imagem 1" loading="lazy" />
-          </button>
-          <button class="gallery-item reveal" type="button" data-full="../assets/clinica-2.jpg" aria-label="Ampliar imagem da clínica 2">
-            <img src="../assets/clinica-2.jpg" alt="Ambiente da clínica - imagem 2" loading="lazy" />
-          </button>
-          <button class="gallery-item reveal" type="button" data-full="../assets/procedimento-2.jpg" aria-label="Ampliar imagem de procedimento 2">
-            <img src="../assets/procedimento-2.jpg" alt="Procedimento estético - imagem 2" loading="lazy" />
-          </button>
-          <button class="gallery-item gallery-wide reveal" type="button" data-full="../assets/procedimento-3.jpg" aria-label="Ampliar imagem de procedimento 3">
-            <img src="../assets/procedimento-3.jpg" alt="Procedimento estético - imagem 3" loading="lazy" />
-          </button>
-          <button class="gallery-item reveal" type="button" data-full="../assets/procedimento-4.jpg" aria-label="Ampliar imagem de procedimento 4">
-            <img src="../assets/procedimento-4.jpg" alt="Procedimento estético - imagem 4" loading="lazy" />
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reviews-section" id="avaliacoes">
-      <div class="container">
-        <div class="reviews-top reveal">
           <div>
-            <span class="eyebrow">AVALIAÇÕES</span>
-            <h2>O cuidado que deixa marcas positivas.</h2>
+
+            <span class="eyebrow dark">
+              ESPECIALIDADES
+            </span>
+
+            <h2>
+              Possibilidades para realçar
+              <em>o melhor de você.</em>
+            </h2>
+
           </div>
 
-          <div class="rating-box" aria-label="Avaliação 5 de 5">
-            <strong>5,0</strong>
-            <div>
-              <span class="stars">★★★★★</span>
-              <small>Avaliações</small>
+          <p>
+            Conheça as áreas de atendimento e fale diretamente com a clínica
+            para entender qual abordagem faz sentido para você.
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+          <article class="service-card reveal">
+
+            <div class="service-top">
+              <span>01</span>
+
+              <div class="service-icon">
+                <i data-lucide="stethoscope"></i>
+              </div>
             </div>
-          </div>
+
+            <h3>Clínica Geral</h3>
+
+            <p>
+              Cuidados completos e acompanhamento personalizado
+              para diferentes necessidades.
+            </p>
+
+            <a
+              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20Cl%C3%ADnica%20Geral."
+              target="_blank"
+            >
+              Quero saber mais
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="service-card featured reveal">
+
+            <div class="service-top">
+              <span>02</span>
+
+              <div class="service-icon">
+                <i data-lucide="cross"></i>
+              </div>
+            </div>
+
+            <h3>Cirurgias</h3>
+
+            <p>
+              Procedimentos com planejamento, cuidado e atenção
+              individualizada.
+            </p>
+
+            <a
+              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20Cirurgias."
+              target="_blank"
+            >
+              Quero saber mais
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-top">
+              <span>03</span>
+
+              <div class="service-icon">
+                <i data-lucide="sparkles"></i>
+              </div>
+            </div>
+
+            <h3>Clareamento</h3>
+
+            <p>
+              Tratamentos voltados para um sorriso mais iluminado
+              e uma aparência renovada.
+            </p>
+
+            <a
+              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20Clareamento."
+              target="_blank"
+            >
+              Quero saber mais
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-top">
+              <span>04</span>
+
+              <div class="service-icon">
+                <i data-lucide="scan-face"></i>
+              </div>
+            </div>
+
+            <h3>Harmonização Facial</h3>
+
+            <p>
+              Procedimentos personalizados para valorizar a harmonia
+              e o equilíbrio da face.
+            </p>
+
+            <a
+              href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20Harmoniza%C3%A7%C3%A3o%20Facial."
+              target="_blank"
+            >
+              Quero saber mais
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </article>
+
         </div>
 
-        <div class="cards-grid reviews-grid">
-          <article class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <p>"Avaliação real do Google será inserida aqui."</p>
-            <span>Nome do paciente</span>
-          </article>
-          <article class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <p>"Avaliação real do Google será inserida aqui."</p>
-            <span>Nome do paciente</span>
-          </article>
-          <article class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <p>"Avaliação real do Google será inserida aqui."</p>
-            <span>Nome do paciente</span>
-          </article>
-        </div>
       </div>
+
     </section>
 
-    <section class="cta-section">
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+
+      <div class="manifesto-glow"></div>
+
+      <div class="container manifesto-content reveal">
+
+        <span class="eyebrow">
+          ESSÊNCIA
+        </span>
+
+        <h2>
+          Beleza não é sobre mudar quem você é.
+          <em>É sobre valorizar o que já existe em você.</em>
+        </h2>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIÊNCIA -->
+    <section class="section experience" id="experiencia">
+
+      <div class="container">
+
+        <div class="section-header single reveal">
+
+          <span class="eyebrow dark">
+            EXPERIÊNCIA
+          </span>
+
+          <h2>
+            Um atendimento pensado nos
+            <em>detalhes.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="experience-list">
+
+          <article class="experience-row reveal">
+
+            <span class="number">01</span>
+
+            <div class="experience-icon">
+              <i data-lucide="messages-square"></i>
+            </div>
+
+            <div>
+              <h3>Escuta</h3>
+              <p>
+                Primeiro, entendemos você, suas necessidades
+                e o que espera do atendimento.
+              </p>
+            </div>
+
+            <i class="row-arrow" data-lucide="arrow-up-right"></i>
+
+          </article>
+
+
+          <article class="experience-row reveal">
+
+            <span class="number">02</span>
+
+            <div class="experience-icon">
+              <i data-lucide="clipboard-check"></i>
+            </div>
+
+            <div>
+              <h3>Orientação</h3>
+              <p>
+                Informações claras ajudam você a compreender
+                as possibilidades e tomar decisões.
+              </p>
+            </div>
+
+            <i class="row-arrow" data-lucide="arrow-up-right"></i>
+
+          </article>
+
+
+          <article class="experience-row reveal">
+
+            <span class="number">03</span>
+
+            <div class="experience-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+
+            <div>
+              <h3>Cuidado</h3>
+              <p>
+                Cada etapa é conduzida com atenção, conforto
+                e respeito à sua individualidade.
+              </p>
+            </div>
+
+            <i class="row-arrow" data-lucide="arrow-up-right"></i>
+
+          </article>
+
+
+          <article class="experience-row reveal">
+
+            <span class="number">04</span>
+
+            <div class="experience-icon">
+              <i data-lucide="heart"></i>
+            </div>
+
+            <div>
+              <h3>Acompanhamento</h3>
+              <p>
+                O relacionamento continua além do primeiro
+                atendimento, com atenção à sua experiência.
+              </p>
+            </div>
+
+            <i class="row-arrow" data-lucide="arrow-up-right"></i>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALERIA -->
+    <section class="section gallery-section" id="galeria">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div>
+
+            <span class="eyebrow dark">
+              GALERIA
+            </span>
+
+            <h2>
+              Um pouco do universo da
+              <em>clínica.</em>
+            </h2>
+
+          </div>
+
+          <p>
+            Clique nas imagens para visualizar em tela cheia.
+          </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+          <button
+            class="gallery-item large reveal"
+            data-image="../assets/clinica-1.jpg"
+          >
+            <img
+              src="../assets/clinica-1.jpg"
+              alt="Ambiente da clínica"
+              loading="lazy"
+            >
+
+            <span>Ambiente</span>
+          </button>
+
+
+          <button
+            class="gallery-item reveal"
+            data-image="../assets/doutora.jpg"
+          >
+            <img
+              src="../assets/doutora.jpg"
+              alt="Dra. Carolina Martins"
+              loading="lazy"
+            >
+
+            <span>Dra. Carolina Martins</span>
+          </button>
+
+
+          <button
+            class="gallery-item reveal"
+            data-image="../assets/clinica-2.jpg"
+          >
+            <img
+              src="../assets/clinica-2.jpg"
+              alt="Espaço da clínica"
+              loading="lazy"
+            >
+
+            <span>Detalhes</span>
+          </button>
+
+
+          <button
+            class="gallery-item reveal"
+            data-image="../assets/procedimento-1.jpg"
+          >
+            <img
+              src="../assets/procedimento-1.jpg"
+              alt="Procedimento"
+              loading="lazy"
+            >
+
+            <span>Procedimento</span>
+          </button>
+
+
+          <button
+            class="gallery-item reveal"
+            data-image="../assets/procedimento-2.jpg"
+          >
+            <img
+              src="../assets/procedimento-2.jpg"
+              alt="Procedimento"
+              loading="lazy"
+            >
+
+            <span>Experiência</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AVALIAÇÕES -->
+    <section class="section reviews" id="avaliacoes">
+
+      <div class="container reviews-grid">
+
+        <div class="reviews-content reveal">
+
+          <span class="eyebrow dark">
+            AVALIAÇÕES
+          </span>
+
+          <h2>
+            Confiança começa com uma boa
+            <em>experiência.</em>
+          </h2>
+
+          <div class="rating">
+
+            <strong>5,0</strong>
+
+            <div>
+              <div class="stars">★★★★★</div>
+              <span>Avaliação média</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-card reveal">
+
+          <div class="quote">“</div>
+
+          <p>
+            As avaliações reais do Google podem ser inseridas
+            aqui para reforçar a prova social da clínica.
+          </p>
+
+          <small>
+            Substitua este bloco pelas avaliações reais.
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <div class="cta-glow"></div>
+
       <div class="container cta-content reveal">
-        <span class="eyebrow">AGENDE SUA AVALIAÇÃO</span>
-        <h2>Seu próximo cuidado começa aqui.</h2>
-        <p>Agende uma avaliação e descubra quais possibilidades fazem sentido para você.</p>
+
+        <span class="eyebrow">
+          PRÓXIMO PASSO
+        </span>
+
+        <h2>
+          Seu cuidado começa com uma
+          <em>conversa.</em>
+        </h2>
+
+        <p>
+          Fale com a clínica pelo WhatsApp e tire suas dúvidas
+          sobre atendimento e procedimentos.
+        </p>
+
         <a
-          class="btn btn-gold"
+          class="button button-gold large"
           href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
           target="_blank"
           rel="noopener noreferrer"
         >
-          Agendar avaliação
+          Falar pelo WhatsApp
           <i data-lucide="message-circle"></i>
         </a>
+
       </div>
+
     </section>
 
-    <section class="section location-section" id="localizacao">
-      <div class="container location-layout">
-        <div class="location-copy reveal">
-          <span class="eyebrow">LOCALIZAÇÃO</span>
-          <h2>Onde estamos</h2>
 
-          <address>
-            Rua Euclides Miranda Miragaia, 939<br />
-            Centro<br />
-            São José dos Campos - SP<br />
-            12245-820<br />
-            Brasil
-          </address>
+    <!-- LOCALIZAÇÃO -->
+    <section class="section location" id="localizacao">
 
-          <a class="phone-link" href="tel:+5512981652378">
-            <i data-lucide="phone"></i>
-            +55 12 98165-2378
-          </a>
+      <div class="container location-grid">
+
+        <div class="location-content reveal">
+
+          <span class="eyebrow dark">
+            LOCALIZAÇÃO
+          </span>
+
+          <h2>
+            Estamos no
+            <em>Centro.</em>
+          </h2>
+
+          <p>
+            Encontre a clínica em São José dos Campos e venha
+            viver uma experiência de cuidado mais pessoal.
+          </p>
+
+
+          <div class="contact-info">
+
+            <div class="contact-row">
+
+              <div class="contact-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+
+              <div>
+                <small>ENDEREÇO</small>
+
+                <address>
+                  Rua Euclides Miranda Miragaia, 939<br>
+                  Centro · São José dos Campos — SP<br>
+                  CEP 12245-820
+                </address>
+              </div>
+
+            </div>
+
+
+            <div class="contact-row">
+
+              <div class="contact-icon">
+                <i data-lucide="phone"></i>
+              </div>
+
+              <div>
+
+                <small>WHATSAPP</small>
+
+                <a href="tel:+5512981652378">
+                  +55 12 98165-2378
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
 
           <a
-            class="btn btn-dark"
+            class="button button-dark"
             href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
             target="_blank"
-            rel="noopener noreferrer"
           >
-            Falar pelo WhatsApp
-            <i data-lucide="message-circle"></i>
+            Falar com a clínica
+            <i data-lucide="arrow-up-right"></i>
           </a>
+
         </div>
 
-        <div class="map-wrap reveal">
+
+        <div class="map">
+
           <iframe
             src="https://www.google.com/maps?q=Rua+Euclides+Miranda+Miragaia,+939,+Centro,+S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP,+12245-820,+Brasil&output=embed"
             width="100%"
             height="100%"
-            style="border:0;"
+            style="border:0"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Localização da clínica da Dra. Carolina Martins"
+            title="Localização da clínica"
           ></iframe>
+
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Rua%20Euclides%20Miranda%20Miragaia%2C%20939%2C%20Centro%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP"
+            target="_blank"
+          >
+            Abrir no Google Maps
+            <i data-lucide="external-link"></i>
+          </a>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
-  <footer class="site-footer">
+
+  <!-- FOOTER -->
+  <footer>
+
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="../assets/logo.png" alt="Logo Dra. Carolina Martins" />
-        <p>Dra. Carolina Martins</p>
+
+      <div>
+
+        <img
+          class="footer-logo"
+          src="../assets/logo.png"
+          alt="Dra. Carolina Martins"
+        >
+
+        <p>
+          Estética · Cuidado · Sofisticação
+        </p>
+
       </div>
 
-      <nav class="footer-nav" aria-label="Navegação do rodapé">
-        <a href="#inicio">Início</a>
+
+      <div class="footer-links">
+
+        <strong>NAVEGAÇÃO</strong>
+
         <a href="#sobre">Sobre</a>
         <a href="#especialidades">Especialidades</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#avaliacoes">Avaliações</a>
-        <a href="#localizacao">Localização</a>
-      </nav>
+        <a href="#galeria">Galeria</a>
+        <a href="#localizacao">Contato</a>
 
-      <a
-        class="btn btn-gold"
-        href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Agendar avaliação
-      </a>
+      </div>
+
+
+      <div class="footer-action">
+
+        <strong>PRONTO PARA COMEÇAR?</strong>
+
+        <a
+          class="button button-gold"
+          href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
+          target="_blank"
+        >
+          Agendar avaliação
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </div>
+
     </div>
+
 
     <div class="container footer-bottom">
-      <p>© 2026 Dra. Carolina Martins. Todos os direitos reservados.</p>
+
+      <span>
+        © <span id="year"></span> Dra. Carolina Martins
+      </span>
+
+      <span>
+        São José dos Campos · SP
+      </span>
+
     </div>
+
   </footer>
 
+
+  <!-- WHATSAPP FLUTUANTE -->
   <a
     class="floating-whatsapp"
     href="https://wa.me/5512981652378?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carolina%20Martins."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Falar com a clínica pelo WhatsApp"
->
-    <svg
-        class="whatsapp-icon"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-    >
-        <path
-            fill="currentColor"
-            d="M19.11 17.42c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.91 2.92 4.63 4.09.65.28 1.15.45 1.54.57.65.21 1.24.18 1.7.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
-        />
-        <path
-            fill="currentColor"
-            d="M16.03 3C8.84 3 3 8.84 3 16.03c0 2.3.6 4.55 1.74 6.53L3 29l6.59-1.72a13 13 0 0 0 6.44 1.7h.01C23.2 28.98 29 23.15 29 16.03 29 8.84 23.2 3 16.03 3zm0 23.9h-.01a10.8 10.8 0 0 1-5.51-1.51l-.4-.24-3.91 1.02 1.04-3.81-.26-.42a10.86 10.86 0 1 1 9.05 4.96z"
-        />
-    </svg>
-</a>
+  >
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Visualizador de imagem">
-    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fechar imagem">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+
+      <path
+        fill="currentColor"
+        d="M19.11 17.42c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.91 2.92 4.63 4.09.65.28 1.15.45 1.54.57.65.21 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+      />
+
+      <path
+        fill="currentColor"
+        d="M16.03 3C8.84 3 3 8.84 3 16.03c0 2.3.6 4.55 1.74 6.53L3 29l6.59-1.72a13 13 0 0 0 6.44 1.7h.01C23.2 28.98 29 23.15 29 16.03 29 8.84 23.2 3 16.03 3zm0 23.9h-.01a10.8 10.8 0 0 1-5.51-1.51l-.4-.24-3.91 1.02 1.04-3.81-.26-.42a10.86 10.86 0 1 1 9.05 4.96z"
+      />
+
+    </svg>
+
+    <span>WhatsApp</span>
+
+  </a>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+
+    <button
+      id="lightboxClose"
+      class="lightbox-close"
+      aria-label="Fechar imagem"
+    >
       <i data-lucide="x"></i>
     </button>
-    <img id="lightboxImage" src="" alt="" />
+
+    <img id="lightboxImage" src="" alt="">
+
   </div>
 
+
+  <!-- SCRIPTS -->
+
   <script src="https://unpkg.com/lucide@latest"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <script src="script.js"></script>
+
 </body>
 </html>
+```

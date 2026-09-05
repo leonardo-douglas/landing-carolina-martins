@@ -1,253 +1,422 @@
-// ========================================
-// DRA. CAROLINA MARTINS
-// JAVASCRIPT DA LANDING PAGE
-// ========================================
-
+```javascript
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ==============================
-    // HEADER AO ROLAR A PÁGINA
-    // ==============================
+  const header = document.getElementById("siteHeader");
 
-    const header = document.querySelector(".header");
+  const menuToggle = document.getElementById("menuToggle");
 
-    function handleHeader() {
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  const lightbox = document.getElementById("lightbox");
+
+  const lightboxImage = document.getElementById("lightboxImage");
+
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  const year = document.getElementById("year");
+
+
+  /* ANO AUTOMÁTICO */
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+
+  /* HEADER AO ROLAR */
+
+  function updateHeader() {
+
+    if (!header) return;
+
+    if (window.scrollY > 30) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
     }
 
-    window.addEventListener("scroll", handleHeader);
-    handleHeader();
+  }
+
+  updateHeader();
+
+  window.addEventListener(
+    "scroll",
+    updateHeader,
+    { passive: true }
+  );
 
 
-    // ==============================
-    // MENU MOBILE
-    // ==============================
+  /* MENU MOBILE */
 
-    const menuButton = document.querySelector(".menu-toggle");
-    const mobileMenu = document.querySelector(".mobile-menu");
+  function closeMenu() {
 
-    if (menuButton && mobileMenu) {
+    if (!menuToggle || !mobileMenu) return;
 
-        menuButton.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
 
-            const isOpen = mobileMenu.classList.toggle("active");
+    mobileMenu.classList.remove("open");
 
-            menuButton.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
-
-        });
-
-    }
-
-
-    // ==============================
-    // FECHAR MENU AO CLICAR NO LINK
-    // ==============================
-
-    const mobileLinks = document.querySelectorAll(
-        ".mobile-menu a"
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
     );
 
-    mobileLinks.forEach(link => {
+  }
 
-        link.addEventListener("click", () => {
 
-            mobileMenu?.classList.remove("active");
+  if (menuToggle && mobileMenu) {
 
-            menuButton?.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+    menuToggle.addEventListener("click", () => {
 
-        });
+      const isOpen =
+        mobileMenu.classList.toggle("open");
+
+      menuToggle.classList.toggle(
+        "active",
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
 
     });
 
-
-    // ==============================
-    // LIGHTBOX DA GALERIA
-    // ==============================
-
-    const galleryItems = document.querySelectorAll(
-        ".gallery-item"
-    );
-
-    const lightbox = document.querySelector(".lightbox");
-    const lightboxImage = document.querySelector(".lightbox-image");
-    const lightboxClose = document.querySelector(".lightbox-close");
-
-    galleryItems.forEach(item => {
-
-        item.addEventListener("click", () => {
-
-            const image = item.querySelector("img");
-
-            if (!image || !lightbox || !lightboxImage) {
-                return;
-            }
-
-            lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt;
-
-            lightbox.classList.add("active");
-
-            document.body.style.overflow = "hidden";
-
-        });
-
-    });
+  }
 
 
-    // ==============================
-    // FECHAR LIGHTBOX
-    // ==============================
+  /* FECHAR MENU AO CLICAR */
 
-    function closeLightbox() {
+  document
+    .querySelectorAll(".mobile-menu a")
+    .forEach(link => {
 
-        if (!lightbox) {
-            return;
-        }
-
-        lightbox.classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    }
-
-    lightboxClose?.addEventListener(
+      link.addEventListener(
         "click",
-        closeLightbox
-    );
-
-
-    lightbox?.addEventListener("click", event => {
-
-        if (event.target === lightbox) {
-            closeLightbox();
-        }
+        closeMenu
+      );
 
     });
 
 
-    // Fechar com ESC
+  /* FECHAR MENU REDIMENSIONANDO */
 
-    document.addEventListener("keydown", event => {
+  window.addEventListener("resize", () => {
 
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
-
-    });
-
-
-    // ==============================
-    // LUCIDE ICONS
-    // ==============================
-
-    if (typeof lucide !== "undefined") {
-        lucide.createIcons();
+    if (window.innerWidth > 800) {
+      closeMenu();
     }
 
+  });
 
-    // ==============================
-    // ANIMAÇÕES GSAP
-    // ==============================
+
+  /* SCROLL SUAVE */
+
+  document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(link => {
+
+      link.addEventListener("click", event => {
+
+        const targetId =
+          link.getAttribute("href");
+
+        if (
+          !targetId ||
+          targetId === "#"
+        ) {
+          return;
+        }
+
+        const target =
+          document.querySelector(targetId);
+
+        if (!target) return;
+
+        event.preventDefault();
+
+        closeMenu();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      });
+
+    });
+
+
+  /* ICONES LUCIDE */
+
+  function renderIcons() {
 
     if (
-        typeof gsap !== "undefined" &&
-        typeof ScrollTrigger !== "undefined"
+      typeof lucide !== "undefined"
     ) {
 
-        gsap.registerPlugin(ScrollTrigger);
+      lucide.createIcons();
 
-        const elements = document.querySelectorAll(
-            ".reveal"
-        );
+    }
 
-        elements.forEach(element => {
+  }
 
-            gsap.fromTo(
-                element,
+  renderIcons();
 
-                {
-                    opacity: 0,
-                    y: 40
-                },
 
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    ease: "power3.out",
+  /* ANIMAÇÕES AO ENTRAR NA TELA */
 
-                    scrollTrigger: {
-                        trigger: element,
-                        start: "top 85%",
-                        once: true
-                    }
-                }
+  const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target.classList.add(
+              "visible"
             );
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
 
         });
 
+      },
+      {
+        threshold: 0.12
+      }
+    );
 
-        // ==============================
-        // HERO PARALLAX
-        // ==============================
 
-        const heroImage = document.querySelector(
-            ".hero-image"
-        );
+  revealElements.forEach(element => {
 
-        if (heroImage) {
+    observer.observe(element);
 
-            gsap.to(heroImage, {
+  });
 
-                yPercent: 10,
 
-                ease: "none",
+  /* LIGHTBOX DA GALERIA */
 
-                scrollTrigger: {
-                    trigger: ".hero",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
+  const galleryItems =
+    document.querySelectorAll(
+      ".gallery-item"
+    );
 
-            });
+
+  function openLightbox(imageSrc) {
+
+    if (
+      !lightbox ||
+      !lightboxImage
+    ) {
+      return;
+    }
+
+    lightboxImage.src =
+      imageSrc;
+
+    lightbox.classList.add(
+      "open"
+    );
+
+    document.body.style.overflow =
+      "hidden";
+
+  }
+
+
+  function closeLightbox() {
+
+    if (
+      !lightbox ||
+      !lightboxImage
+    ) {
+      return;
+    }
+
+    lightbox.classList.remove(
+      "open"
+    );
+
+    document.body.style.overflow =
+      "";
+
+    setTimeout(() => {
+
+      lightboxImage.src = "";
+
+    }, 250);
+
+  }
+
+
+  galleryItems.forEach(item => {
+
+    item.addEventListener(
+      "click",
+      () => {
+
+        const image =
+          item.dataset.image;
+
+        if (image) {
+
+          openLightbox(image);
 
         }
 
+      }
+    );
+
+  });
+
+
+  if (lightboxClose) {
+
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+  }
+
+
+  if (lightbox) {
+
+    lightbox.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === lightbox
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+  }
+
+
+  /* ESC */
+
+  document.addEventListener(
+    "keydown",
+    event => {
+
+      if (
+        event.key === "Escape"
+      ) {
+
+        closeMenu();
+
+        closeLightbox();
+
+      }
+
     }
+  );
 
 
-    // ==============================
-    // REDUZIR ANIMAÇÕES
-    // PARA QUEM PREFERE MENOS MOVIMENTO
-    // ==============================
+  /* GSAP */
 
-    const prefersReducedMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
+  const prefersReducedMotion =
+    window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-    if (prefersReducedMotion) {
 
-        document
-            .querySelectorAll(".reveal")
-            .forEach(element => {
+  if (
+    !prefersReducedMotion &&
+    typeof gsap !== "undefined" &&
+    typeof ScrollTrigger !== "undefined"
+  ) {
 
-                element.style.opacity = "1";
-                element.style.transform = "none";
+    gsap.registerPlugin(
+      ScrollTrigger
+    );
 
-            });
 
-    }
+    /* HERO */
+
+    gsap.from(
+      ".hero-bg",
+      {
+        scale: 1.1,
+
+        duration: 1.5,
+
+        ease: "power2.out"
+      }
+    );
+
+
+    /* PARALLAX */
+
+    gsap.to(
+      ".hero-bg",
+      {
+        yPercent: 10,
+
+        ease: "none",
+
+        scrollTrigger: {
+
+          trigger: ".hero",
+
+          start: "top top",
+
+          end: "bottom top",
+
+          scrub: true
+
+        }
+
+      }
+    );
+
+
+    /* MANIFESTO */
+
+    gsap.to(
+      ".manifesto-glow",
+      {
+        y: -80,
+
+        ease: "none",
+
+        scrollTrigger: {
+
+          trigger: ".manifesto",
+
+          start: "top bottom",
+
+          end: "bottom top",
+
+          scrub: true
+
+        }
+
+      }
+    );
+
+  }
+
 
 });
+```
